@@ -35,3 +35,24 @@ INNER JOIN titles as t
 ON e.emp_no = t.emp_no
 WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31') AND (de.to_date = '9999-01-01')
 ORDER BY e.emp_no
+
+-- ***** Deliverable 3: Additional Queries for Written Analysis *****
+
+-- Addition to retiring_title query to include percentage
+SELECT COUNT(title), ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM unique_titles),4) as "percentage", title
+FROM unique_titles
+GROUP BY title
+ORDER BY COUNT(title) DESC;
+
+-- Determine number of current employees of each title with percentage
+SELECT COUNT(title), ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM titles),4) as "percentage", title
+FROM titles
+WHERE to_date = '9999-01-01'
+GROUP BY title
+ORDER BY COUNT(title) DESC;
+
+-- Determine number of Mentorship Eligible employees in each title
+SELECT COUNT(title), title
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY COUNT(title) DESC;
