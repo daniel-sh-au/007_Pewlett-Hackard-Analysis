@@ -19,19 +19,16 @@ The tables below show the number of current employees in each title and the numb
 | ![current_employees_titles_with_percentage.png](https://github.com/daniel-sh-au/UofT_DataBC_Module07_Pewlett-Hackard-Analysis/blob/main/Resources/current_employees_titles_with_percentage.PNG) | ![retiring_titles_with_percentage.png](https://github.com/daniel-sh-au/UofT_DataBC_Module07_Pewlett-Hackard-Analysis/blob/main/Resources/retiring_titles_with_percentage.png)
 
 * In the table, we can see that the majority of those retiring are in senior positions, specifically Senior Engineer (35.77%) and Senior Staff (34.40%). Other retiring employees include Engineers (12.81%), Staff (10.54%), Technique Leader (4.97%), Assistant Engineers (1.50%), and Managers (0.0028%). 
-* Comparing the current employee and retiring employee tables above, we can see similar trends in percentages. For example, Senior Engineers make up 35.79% of current employees but they also make up 35.77% of retiring employees. This demonstrates that there are no abnormalities in the retirement as each title should be losing approximately the same percentage of employees. This was calculated in the table below. It was found that each title was losing about 30.00% of their employees with the exception of Manager. 
+* Comparing the current employee and retiring employee tables above, we can see similar trends in percentages. For example, Senior Engineers make up 35.79% of current employees but they also make up 35.77% of retiring employees. This demonstrates that there are no abnormalities in the retirement data as each title should be losing approximately the same percentage of employees. This was calculated in the table below. It was found that each title was losing about 30.00% of their employees with the exception of the Manager role. 
   ![retiring_current_count_percentage.png](https://github.com/daniel-sh-au/UofT_DataBC_Module07_Pewlett-Hackard-Analysis/blob/main/Resources/retiring_current_count_percentage.PNG)
-* 
-
-* retiring titles png, few managers
 
 ![mentorship_eligibility_titles.png](https://github.com/daniel-sh-au/UofT_DataBC_Module07_Pewlett-Hackard-Analysis/blob/main/Resources/mentorship_eligibility_titles.png)
-* The table above displays the number of mentorship eligible employees in each title. In contrast to the Current/Retiring Employees Titles tables above, possible mentors are mostly in the Senior Staff or Engineer role. This could be a potential issue a
-
+* The table above displays the number of mentorship eligible employees in each title. In contrast to the Current/Retiring Employees Titles tables above, possible mentors are mostly in the Senior Staff or Engineer role. This could be a potential issue for roles such as Senior Engineer where there may by an inadequate amount of Senior Engineer mentors to support the "silver tsunami". A possible solution could be to increase the mentorship criteria from just employees born in 1965. 
+* Another major observation was realizing how few managers roles exist at Pewlett Hackard. Despite only 22.22% of managers retiring soon, this is significant considering there are no eligible manager mentors. With so many employees retiring, this could be a great opportunity for Pewlett Hackard to determine why some of the more senior employees were not given the opportunity to become managers themselves. Furthermore, this could be an opportunity for the company to hire more managers to improve the current imbalance of roles. 
 
 ## Summary
 How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 72458
 
 Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-no
+no, only 1549 (2.14%)
