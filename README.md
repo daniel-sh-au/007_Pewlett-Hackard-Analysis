@@ -27,8 +27,34 @@ The tables below show the number of current employees in each title and the numb
 * Another major observation was realizing how few managers roles exist at Pewlett Hackard. Despite only 22.22% of managers retiring soon, this is significant considering there are no eligible manager mentors. With so many employees retiring, this could be a great opportunity for Pewlett Hackard to determine why some of the more senior employees were not given the opportunity to become managers themselves. Furthermore, this could be an opportunity for the company to hire more managers to improve the current imbalance of roles. 
 
 ## Summary
-How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-72458
+With the retirement of baby boomers at Pewlett Hackard, 72458 employees will need to be hired to make an impact. This was calculated from the count of all soon to be retired employees born between 01/01/1952 and 12/31/1955. As this is a significant number of employees (~30% of the company), the mentorship program will provide some assistance with this transition. Currently, 1549 employees are eligible for the mentorship program. This number is approximately 2.14% of the total number of employees that must be rehired. This is clearly not enough employees to mentor the next generation of Pewlett Hackard workers. A solution for this problem could be to expand the eligibility criteria in becoming a mentor; Currently, only employees born in 1965 are qualified. This eligibility criteria could be expanded to allow for employees born from 1962-1965 to become mentors. Additionally, employees with longer years of service should also be considered eligible in becoming mentors. Another problem exists in the ratio of Senior Engineer mentors to Senior Engineer retiring employees, which is approximately 1:105. This is a major complication as 1 Senior Engineer could not possibly mentor 105 new Senior Engineers. In addition to expanding the mentorship criteria, it might beneficial to promote some of the qualified Engineers to Senior Engineers. 
 
-Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-no, only 1549 (2.14%)
+**Additional Queries**
+```
+-- Count of employees retiring (72458)
+SELECT COUNT (emp_no) 
+FROM unique_titles;
+
+-- Count of employees eligible for mentorship (1549)
+SELECT COUNT(emp_no) 
+FROM mentorship_eligibility;
+
+-- Determine number of current employees of each title with percentage
+SELECT COUNT(title), ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM titles),4) as "percentage", title
+FROM titles
+WHERE to_date = '9999-01-01'
+GROUP BY title
+ORDER BY COUNT(title) DESC;
+
+-- Addition to retiring_title query to include percentage
+SELECT COUNT(title), ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM unique_titles),4) as "percentage", title
+FROM unique_titles
+GROUP BY title
+ORDER BY COUNT(title) DESC;
+
+-- Determine number of Mentorship Eligible employees in each title
+SELECT COUNT(title), title
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY COUNT(title) DESC;
+```
